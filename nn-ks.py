@@ -69,13 +69,13 @@ model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=input_sh
 model.add(Conv2D(64, (3, 3), activation='relu'))
 #Pooling Layer 1, 2 dimensional layer, uses max pooling algorithm, uses pool of size 2x2
 model.add(MaxPooling2D(pool_size=(2, 2)))
-#Dropout amount
+#Dropout amount(Percentage of nodes to randomly deactivate)
 model.add(Dropout(0.25))
 #Flatten to vector
 model.add(Flatten())
 #Fully Connected Layer 1, uses 128 nodes and ReLu function for activation
 model.add(Dense(128, activation='relu'))
-#Dropout amount
+#Dropout amount(Percentage of nodes to randomly deactivate)
 model.add(Dropout(0.5))
 #Fully Connected Layer 2, output layer which contains total number of outputs(classes) and softmax activation function
 model.add(Dense(num_classes, activation='softmax'))
